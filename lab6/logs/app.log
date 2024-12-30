@@ -1,0 +1,29 @@
+2024-12-19 20:29:06,095 - app - INFO - Приложение запущено
+2024-12-19 20:29:06,441 - app - INFO - Приложение запущено
+2024-12-19 20:29:24,785 - app - INFO - Получен GET запрос от 127.0.0.1
+2024-12-19 20:29:24,786 - app - DEBUG - Детальная отладочная информация
+2024-12-19 20:29:24,786 - app - INFO - Информационное сообщение
+2024-12-19 20:29:24,787 - app - WARNING - Предупреждение
+2024-12-19 20:29:24,787 - app - DEBUG - Метод test_endpoint выполнен за 0.00 секунд
+2024-12-19 20:29:31,696 - app - INFO - Получен GET запрос от 127.0.0.1
+2024-12-19 20:29:31,696 - app - DEBUG - Детальная отладочная информация
+2024-12-19 20:29:31,696 - app - INFO - Информационное сообщение
+2024-12-19 20:29:31,697 - app - WARNING - Предупреждение
+2024-12-19 20:29:31,697 - app - ERROR - Ошибка: Тестовая ошибка
+Traceback (most recent call last):
+  File "C:\Users\xach1\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\xach1\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\sadasdfsdaf\lab5.py", line 69, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\sadasdfsdaf\lab5.py", line 99, in test_endpoint
+    raise Exception('Тестовая ошибка')
+Exception: Тестовая ошибка
+2024-12-19 20:29:40,571 - app - Level 25 - Очень подробное логирование
+2024-12-19 20:29:40,572 - app - DEBUG - Метод verbose_endpoint выполнен за 0.00 секунд
+2024-12-30 23:43:04,961 - app - INFO - Приложение запущено
+2024-12-30 23:43:05,549 - app - INFO - Приложение запущено

@@ -1,0 +1,14 @@
+2024-12-19 20:29:31,697 - app - ERROR - Ошибка: Тестовая ошибка
+Traceback (most recent call last):
+  File "C:\Users\xach1\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\xach1\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\sadasdfsdaf\lab5.py", line 69, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\sadasdfsdaf\lab5.py", line 99, in test_endpoint
+    raise Exception('Тестовая ошибка')
+Exception: Тестовая ошибка
