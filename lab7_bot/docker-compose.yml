@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_USER=postgres
+      - DB_PASSWORD=Vovandrich1337
+      - DB_NAME=TGAnalyzer
+    volumes:
+      - .:/app
+    restart: always
+    command: >
+      /bin/bash -c "
+        while ! nc -z db 5432; do
+          echo 'Waiting for database...'
+          sleep 1
+        done
+        python init_db.py && python main.py
+      "
+
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Vovandrich1337
+      - POSTGRES_DB=TGAnalyzer
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data: 
